@@ -32,3 +32,18 @@ didn't have time to setup proper eslint react+nextjs linting.
 - hosting on my own vps or s3
 - formik instead of react-bootstrap forms
 - user registration/login + db
+
+
+
+## Currently includes alignment search for the following proteins
+
+- NC_000852
+- NC_007346
+- NC_008724
+- NC_009899
+- NC_014637
+- NC_020104
+- NC_023423
+- NC_023640
+- NC_023719
+- NC_027867
