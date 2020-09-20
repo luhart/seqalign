@@ -44,6 +44,8 @@ didn't have time to setup proper eslint react+nextjs linting.
 - NC_014637
 - NC_020104
 - NC_023423
-- NC_023640
+- NC_023640 (NC_016072)
 - NC_023719
 - NC_027867
+
+NOTE: NCBI Reference Sequence: NC_023640.1 has been replaced by NC_016072.

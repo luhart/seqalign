@@ -7,6 +7,9 @@ export default function SearchForm() {
                 onSubmit={
                     async e => {
                         e.preventDefault(); // stops refresh
+                        fetch('/api/?seq=atcgact')
+                            .then(response => response.json())
+                            .then(data => console.log(data));
                         console.log("submitting dna search")
                     }
                 }
