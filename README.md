@@ -1,6 +1,6 @@
 # seq-align
+deployed on (vercel)[https://seqalign.vercel.app/]
 
-running at [url](google.com)
 
 ## tech stack
 
