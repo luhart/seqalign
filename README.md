@@ -1,30 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# seq-align
 
-## Getting Started
+running at [url](google.com)
 
-First, run the development server:
+## tech stack
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### backend
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- django
+- celery
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### frontend
 
-## Learn More
+- react
+- nextjs
 
-To learn more about Next.js, take a look at the following resources:
+### workflow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- docker
+sudo docker build -t l/seq-align-frontend .
+sudo docker run -d -p 3333:3000 l/seq-align-frontend:latest
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+The frontent utilizes docker's multi-stage build feature to keep the image size smaller. This requires Docker version 17.05 or higher for both the daemon and client.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+didn't have time to setup proper eslint react+nextjs linting. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## improvements if I had more time
+- eslint
+- hosting on my own vps or s3
+- formik instead of react-bootstrap forms
+- user registration/login + db
