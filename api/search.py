@@ -12,6 +12,7 @@ def search_proteins(seq):
     found = False
     locus_tag = "n/a"
     location = "n/a"
+    full_protein = "n/a"
 
     for protein_file in protein_files:
         for seq_record in SeqIO.parse(protein_file, "fasta"):
