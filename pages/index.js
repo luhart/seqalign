@@ -16,7 +16,9 @@ export default function Home() {
         <h3>A utility for finding sequence alignments in a dna library</h3>
         <br/>
       </section>
-      <SearchForm />
+      <div className={utilStyles.search}>
+        <SearchForm />
+      </div>
     </Layout>
   )
 }

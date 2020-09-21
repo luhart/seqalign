@@ -52,6 +52,7 @@ export default class SearchForm extends React.Component{
                     <Table striped bordered hover>
                         <thead>
                             <tr>
+                                <th>dna input</th>
                                 <th>status</th>
                                 <th>locus tag</th>
                                 <th>location</th>
@@ -61,6 +62,7 @@ export default class SearchForm extends React.Component{
                         <tbody>
                             {this.state.jobs.map((job, index) => (
                                 <tr key={index}>
+                                    <td>{job.dna}</td>
                                     <td>{job.found}</td>
                                     <td>{job.locus_tag}</td>
                                     <td>{job.location}</td>

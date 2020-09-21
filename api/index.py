@@ -23,4 +23,4 @@ async def index(request, path=""):
     else:
         found = "not found"
 
-    return json({"found": found, "locus_tag": locus_tag, "location": location, "seq": protein})
+    return json({"dna": seq, "found": found, "locus_tag": locus_tag, "location": location, "protein": protein})
