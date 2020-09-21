@@ -26,7 +26,7 @@ export default class SearchForm extends React.Component{
         return (
             <Form onSubmit={async e => {this.handleSubmit(e)}}>
                 <Form.Group controlId="sequenceForm.TextArea">
-                    <Form.Control as="textarea" rows="2" />
+                    <Form.Control as="textarea" rows="2" value={this.state.value} onChange={this.handleChange}/>
                 </Form.Group>
                 <Button variant="outline-primary" type="submit">Search</Button>
             </Form>
