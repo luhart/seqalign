@@ -5,7 +5,7 @@ export default class SearchForm extends React.Component{
         super(props)
         this.state = {
             value: '',
-            jobs: [{}],
+            jobs: [],
         }
 
         this.handleChange = this.handleChange.bind(this);
