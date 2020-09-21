@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev-install": "pip3 install -r requirements.txt && npm install && sanic api.index.app & next dev",
     "dev": "sanic api.index.app & next dev",
     "build": "next build",
     "start": "next start"

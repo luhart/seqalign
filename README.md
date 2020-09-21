@@ -4,6 +4,11 @@ Live on [Vercel](https://seqalign.vercel.app/)
 
 To make changes, just make a PR to the master branch :)
 
+Run seq-align locally:
+
+```bash
+npm run dev-install
+```
 
 ## Frontend
 
@@ -11,7 +16,7 @@ To make changes, just make a PR to the master branch :)
 - Next.js
 - CSS is mostly react-bootstrap
 
-# API
+## API
 
 The API is a handful of serverless functions running on Vercel
 
