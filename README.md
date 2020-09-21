@@ -1,10 +1,10 @@
-# seq-align
+# seqalign
 
 Live on [Vercel](https://seqalign.vercel.app/)
 
 To make changes, just make a PR to the master branch :)
 
-Run seq-align locally:
+Run seqalign locally:
 
 ```bash
 npm run dev-install
@@ -14,7 +14,7 @@ npm run dev-install
 
 - React
 - Next.js
-- CSS is mostly react-bootstrap
+- CSS is mostly react-bootstrap + a bit of custom CSS
 
 ## API
 
@@ -46,14 +46,3 @@ The API is a handful of serverless functions running on Vercel
 - NC_027867
 
 NOTE: NCBI Reference Sequence: NC_023640.1 has been replaced by NC_016072.
-
-
-## Example
-
-Searching the DNA sequence:
-
-```tcaagttgttgtcgtcgtctccaaccaaccgtccgtaccgtggacaaccaccaaatcttgggatggatggatgatgccgtcggtggtgatggatggacgaggacgaggccaagccaagttgttgtcgtcgtctccaaccagccgttcgcgtcgtcgaccaccaaatcttgagatggacgtggcatcatcggtggcgatgaaggccaagccaagccaagttgtcgtcgtatccaaccgaccgtccgtgtcgtgaacccccaaaccttgggatggatggccaagccatgttgttgttgttgtcttcgtcgtcgtctccacccaaccgtccgtaccatggacctccaaatcctggcaggggctgatgacaccgtcggtgggatggatggtcaggccaggccaagtcgttgtcgtcgtctccaaccaaccgactgtccgtaccatggacctccaaatcttgggatggacggatgacaccgtcggtgggatgaaggccaagccaagccaagtcgttgtcgtcgtctccaaccaaccgaccataccgtggaccgccaaatcttgggatggacgtggcatcat```
-
-should return:
-
-```MMPRPSQDLAVHGMVGWLETTTTTWLGLAFIPPTVSSVHPKIWRSMVRTVGWLETTTTTWPGLTIHPTDGVISPCQDLEVHGTDGWVETTTKTTTTTWLGHPSQGLGVHDTDGRLDTTTTWLGLAFIATDDATSISRFGGRRRERLVGDDDNNLAWPRPRPSITTDGIIHPSQDLVVVHGTDGWLETTTTT*```
