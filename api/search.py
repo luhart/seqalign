@@ -3,7 +3,7 @@ from os.path import isfile, join
 
 from Bio import SeqIO
 
-PROTEIN_DIR = "./proteins/" 
+PROTEIN_DIR = "./api/proteins/" 
 
 def search_proteins(seq):
     """search all files for a matching protein sequence"""
