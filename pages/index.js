@@ -13,12 +13,13 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <br />
-        <h2>Find sequence alignments in a library of proteins</h2>
+        <h2>Find DNA sequence alignments in a library of proteins</h2>
         <hr />
         <p>
           The DNA sequences are first converted to protein sequences before performing 
-          the search. This conversion is done by translating the reverse complemenet 
-          of the sequences you enter.
+          the search. This conversion is done by translating the reverse complement 
+          of the sequences you enter. To see how this works in the <i>real</i> world checkout this 
+          cool <a href="https://www.nature.com/scitable/topicpage/translation-dna-to-mrna-to-protein-393/">article</a>.
         </p>
         <p>Try out a known sequence: tcaagttgtt
         </p>

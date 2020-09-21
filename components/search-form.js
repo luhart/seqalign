@@ -66,7 +66,7 @@ export default class SearchForm extends React.Component{
                                     <td>{job.found}</td>
                                     <td>{job.locus_tag}</td>
                                     <td>{job.location}</td>
-                                    <td>{job.seq}</td>
+                                    <td>{job.protein}</td>
                                 </tr>
                             ))}
                         </tbody>
