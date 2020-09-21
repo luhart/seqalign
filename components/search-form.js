@@ -21,10 +21,9 @@ export default class SearchForm extends React.Component{
         fetch('/api/?seq=' + this.state.value)
             .then(response => response.json())
             .then(data => console.log(data))
-            .then(data => this.setState({jobs: this.state.jobs.push({data})}));
+            .then(data => this.setState({jobs: [...this.state.jobs, JSON.parse(data)]}));
         console.log("submitting dna search for: " + this.state.value) 
         this.setState({"value": ""})
-        console.log("state: " + this.state)
     }
 
     render() {
