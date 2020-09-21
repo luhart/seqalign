@@ -25,6 +25,7 @@ The API is a handful of serverless functions running on Vercel
 
 ## Future improvements
 
+- Multistage docker deployment (current build and deploy time: 1 min 30 sec)
 - eslint
 - formik instead of react-bootstrap forms
 - user registration/login + db
