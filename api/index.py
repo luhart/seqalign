@@ -16,5 +16,11 @@ app = Sanic("")
 async def index(request, path=""):
     seq = request.args["seq"][0].upper()
     protein = str(converter.dna_to_protein(seq))
-    found, protein_name = search.dna_in_protein(protein)
-    return json({"found": found, "protein_name": protein_name, "protein": protein})
+    found, locus_tag, location = search.dna_in_protein(protein)
+    
+    if found:
+        found = "found" 
+    else:
+        found = "not found"
+
+    return json({"found": found, "locus_tag": locus_tag, "location": location, "seq": protein})
