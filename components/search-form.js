@@ -52,7 +52,7 @@ export default class SearchForm extends React.Component{
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th>status</th>
+                                <th>found</th>
                                 <th>sequence</th>
                                 <th>protein</th>
                             </tr>
@@ -60,7 +60,7 @@ export default class SearchForm extends React.Component{
                         <tbody>
                             {this.state.jobs.map((job, index) => (
                                 <tr key={index}>
-                                    <td>{job.found}</td>
+                                    <td>{ '' + job.found }</td>
                                     <td>{job.protein_name}</td>
                                     <td>{job.protein}</td>
                                 </tr>
