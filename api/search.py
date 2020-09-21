@@ -19,5 +19,6 @@ def search_proteins(seq):
                 found = True
                 locus_tag = seq_record.id
                 location = seq_record.description.split(" ")[-2][10:-1]
+                full_protein = seq_record.seq
                 break
-    return found, locus_tag, location
+    return found, locus_tag, location, full_protein

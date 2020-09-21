@@ -13,12 +13,17 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <br />
-        <h3>A utility for finding sequence alignments in a dna library</h3>
-        <br/>
+        <h2>Find sequence alignments in a library of proteins</h2>
+        <hr />
+        <p>
+          The DNA sequences are first converted to protein sequences before performing 
+          the search. This conversion is done by translating the reverse complemenet 
+          of the sequences you enter.
+        </p>
+        <p>Try out a known sequence: tcaagttgtt
+        </p>
       </section>
-      <div className={utilStyles.search}>
         <SearchForm />
-      </div>
     </Layout>
   )
 }
