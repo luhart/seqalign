@@ -1,39 +1,31 @@
 # seq-align
-deployed on (vercel)[https://seqalign.vercel.app/]
+
+Live on [Vercel](https://seqalign.vercel.app/)
+
+To make changes, just make a PR to the master branch :)
 
 
-## tech stack
+## Frontend
 
-### backend
+- React
+- Next.js
+- CSS is mostly react-bootstrap
 
-- django
-- celery
+# API
 
-### frontend
+The API is a handful of serverless functions running on Vercel
 
-- react
-- nextjs
+- Python
+- Sanic for ASGI
 
-### workflow
+## Future improvements
 
-- docker
-sudo docker build -t l/seq-align-frontend .
-sudo docker run -d -p 3333:3000 l/seq-align-frontend:latest
-
-
-The frontent utilizes docker's multi-stage build feature to keep the image size smaller. This requires Docker version 17.05 or higher for both the daemon and client.
-
-didn't have time to setup proper eslint react+nextjs linting. 
-
-
-
-## improvements if I had more time
 - eslint
-- hosting on my own vps or s3
 - formik instead of react-bootstrap forms
 - user registration/login + db
-
-
+- different dna search options (forward/reverse)
+- tests
+- faster dna search: use makeblastdb instead of python 'in' + for loops
 
 ## Currently includes alignment search for the following proteins
 
@@ -53,7 +45,10 @@ NOTE: NCBI Reference Sequence: NC_023640.1 has been replaced by NC_016072.
 
 ## Example
 
-The dna sequence:
+Searching the DNA sequence:
+
 ```tcaagttgttgtcgtcgtctccaaccaaccgtccgtaccgtggacaaccaccaaatcttgggatggatggatgatgccgtcggtggtgatggatggacgaggacgaggccaagccaagttgttgtcgtcgtctccaaccagccgttcgcgtcgtcgaccaccaaatcttgagatggacgtggcatcatcggtggcgatgaaggccaagccaagccaagttgtcgtcgtatccaaccgaccgtccgtgtcgtgaacccccaaaccttgggatggatggccaagccatgttgttgttgttgtcttcgtcgtcgtctccacccaaccgtccgtaccatggacctccaaatcctggcaggggctgatgacaccgtcggtgggatggatggtcaggccaggccaagtcgttgtcgtcgtctccaaccaaccgactgtccgtaccatggacctccaaatcttgggatggacggatgacaccgtcggtgggatgaaggccaagccaagccaagtcgttgtcgtcgtctccaaccaaccgaccataccgtggaccgccaaatcttgggatggacgtggcatcat```
+
 should return:
+
 ```MMPRPSQDLAVHGMVGWLETTTTTWLGLAFIPPTVSSVHPKIWRSMVRTVGWLETTTTTWPGLTIHPTDGVISPCQDLEVHGTDGWVETTTKTTTTTWLGHPSQGLGVHDTDGRLDTTTTWLGLAFIATDDATSISRFGGRRRERLVGDDDNNLAWPRPRPSITTDGIIHPSQDLVVVHGTDGWLETTTTT*```
