@@ -15,6 +15,6 @@ app = Sanic("")
 @app.route('/<path:path>')
 async def index(request, path=""):
     seq = request.args["seq"][0].upper()
-    protein = converter.dna_to_protein(seq)
+    protein = str(converter.dna_to_protein(seq))
     found, protein_name = search.dna_in_protein(protein)
-    return json({"found": found, "protein": protein_name})
+    return json({"found": found, "protein_name": protein_name, "protein": protein})

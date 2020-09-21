@@ -15,7 +15,7 @@ export default class SearchForm extends React.Component{
 
     handleSubmit(event){
         event.preventDefault(); // stops refresh
-        fetch('http://127.0.0.1:8000/api/?seq=' + this.state.value)
+        fetch('/api/?seq=' + this.state.value)
             .then(response => response.json())
             .then(data => console.log(data));
         console.log("submitting dna search for: " + this.state.value) 
