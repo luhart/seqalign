@@ -5,7 +5,7 @@ export default class SearchForm extends React.Component{
         super(props)
         this.state = {
             value: '',
-            jobs: [],
+            jobs: [{}],
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -18,10 +18,11 @@ export default class SearchForm extends React.Component{
 
     handleSubmit(event){
         event.preventDefault(); // stops refresh
+        var temp = {}
         fetch('/api/?seq=' + this.state.value)
             .then(response => response.json())
-            .then(data => console.log(data))
-            .then(data => this.setState({jobs: [...this.state.jobs, data]}));
+            .then(data => temp=data)
+            .then(data => this.setState({jobs: [...this.state.jobs, temp]}));
         console.log("submitting dna search for: " + this.state.value) 
         this.setState({"value": ""})
     }
@@ -35,7 +36,7 @@ export default class SearchForm extends React.Component{
                             Enter the sequence you'd like to search for
                         </Card.Header>
                         <Card.Body>
-                            <Form onSubmit={async e => {this.handleSubmit(e)}}>
+                            <Form onSubmit={async event => {this.handleSubmit(event)}}>
                                 <Form.Group controlId="sequenceForm.TextArea">
                                     <Form.Control as="textarea" rows="2" value={this.state.value} onChange={this.handleChange}/>
                                 </Form.Group>
